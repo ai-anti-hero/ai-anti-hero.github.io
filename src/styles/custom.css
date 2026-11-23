@@ -1,0 +1,74 @@
+/* Custom styling for AI Anti-Hero */
+
+:root {
+	--sl-color-accent-low: #1a1625;
+	--sl-color-accent: #f97316;
+	--sl-color-accent-high: #fed7aa;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #ffedd5;
+	--sl-color-accent: #ea580c;
+	--sl-color-accent-high: #7c2d12;
+}
+
+/* Custom Callout: "Real Talk" Aside */
+.real-talk-box {
+	margin: 1.5rem 0;
+	padding: 1.25rem 1.5rem;
+	border-left: 4px solid #f97316;
+	background: rgba(249, 115, 22, 0.08);
+	border-radius: 0 0.5rem 0.5rem 0;
+	border-top: 1px solid rgba(249, 115, 22, 0.2);
+	border-right: 1px solid rgba(249, 115, 22, 0.2);
+	border-bottom: 1px solid rgba(249, 115, 22, 0.2);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+:root[data-theme='dark'] .real-talk-box {
+	background: rgba(249, 115, 22, 0.07);
+	border-top-color: rgba(249, 115, 22, 0.25);
+	border-right-color: rgba(249, 115, 22, 0.25);
+	border-bottom-color: rgba(249, 115, 22, 0.25);
+}
+
+.real-talk-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-weight: 700;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.075em;
+	color: #ea580c;
+	margin-bottom: 0.75rem;
+}
+
+:root[data-theme='dark'] .real-talk-badge {
+	color: #fb923c;
+}
+
+.real-talk-icon {
+	font-size: 1.1rem;
+	line-height: 1;
+}
+
+.real-talk-body {
+	font-size: 0.975rem;
+	line-height: 1.65;
+	color: var(--sl-color-text);
+}
+
+.real-talk-body > :first-child {
+	margin-top: 0;
+}
+
+.real-talk-body > :last-child {
+	margin-bottom: 0;
+}
+
+/* Enhancements for brand aesthetic */
+.site-title {
+	font-weight: 800;
+	letter-spacing: -0.02em;
+}

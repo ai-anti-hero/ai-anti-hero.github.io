@@ -1,0 +1,18 @@
+---
+interface Props {
+  title?: string;
+  icon?: string;
+}
+
+const { title = "Real Talk", icon = "⚡" } = Astro.props;
+---
+
+<div class="real-talk-box">
+  <div class="real-talk-badge">
+    <span class="real-talk-icon" aria-hidden="true">{icon}</span>
+    <span class="real-talk-label">{title}</span>
+  </div>
+  <div class="real-talk-body">
+    <slot />
+  </div>
+</div>
