@@ -1,66 +1,27 @@
 ---
 title: AI Anti-Hero
-description: The field guide to practical AI without the hype. Honest architecture, real failure modes, and zero vendor worship.
+description: The field guide to practical AI without the hype.
 template: splash
 hero:
   title: AI Anti-Hero
-  tagline: The field guide to practical AI without the hype. Honest trade-offs, real failure modes, and zero vendor worship.
+  tagline: The field guide to practical AI without the hype.
+  image:
+    file: ../../assets/anti-hero.jpg
+    alt: AI Anti-Hero
   actions:
-    - text: Read Dispatch #1
-      link: /dispatches/01-ai-anthropomorphism/
-      icon: right-arrow
-      variant: primary
-    - text: The Manifesto
+    # - text: Read Dispatch #1
+    #   link: /dispatches/01-ai-anthropomorphism/
+    #   icon: right-arrow
+    #   variant: primary
+    - text: Start Here
       link: /start-here/welcome/
       icon: open-book
-      variant: secondary
+      variant: primary
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 import RealTalk from '../../components/RealTalk.astro';
 
-<RealTalk title="The Guy in the Back" icon="🎙️">
-The AI discourse is choked with breathless evangelism on one side and doomsday paralysis on the other. 
-**AI Anti-Hero** is the voice from the back of the auditorium: unimpressed by demo magic, asking to see the eval suites, the token bills, the fallback logic, and the uncurated failure rates.
+<RealTalk title="The Anti-Hero" icon="information">
+I'm not the hero. I'm the guy in the back making fun of the hero's shirt.
 </RealTalk>
-
-## Choose Your Track
-
-<CardGrid stagger>
-  <Card title="For Decision-Makers & Leadership" icon="rocket">
-    Stop buying glorified text autocompletion wrapped in enterprise license fees. Learn how to audit AI vendor claims, evaluate true operational ROI, and avoid vanity pilot projects that will never survive in production.
-    
-    [Explore the Leadership Playbook &rarr;](/playbooks/non-tech/)
-  </Card>
-
-  <Card title="For Builders & Engineers" icon="seti:graphql">
-    Move past toy zero-shot prompts. Build deterministic guardrails, structured JSON outputs, reproducible evals, multi-agent orchestrations that don't spin in loops, and cost-aware token architectures.
-    
-    [Explore the Engineering Playbook &rarr;](/playbooks/engineering/)
-  </Card>
-</CardGrid>
-
-## What You Won't Find Here
-
-<CardGrid>
-  <Card title="Zero Vendor Worship" icon="warning">
-    We don't parrot corporate press releases or benchmark screenshots cherry-picked on synthetic leaderboards.
-  </Card>
-  <Card title="Zero Prompt Alchemy" icon="error">
-    "Whispering" to LLMs like deities is a temporary workaround, not software architecture. We focus on systems, evals, and deterministic code.
-  </Card>
-  <Card title="Real-World Failure Modes" icon="information">
-    Every architectural pattern we document includes when it breaks, why it hallucinates, and what the recovery plan looks like.
-  </Card>
-  <Card title="Grounded Math, Not Mind" icon="approve-check">
-    Models are next-token probability engines over high-dimensional manifolds—not conscious colleagues. Design accordingly.
-  </Card>
-</CardGrid>
-
-## Latest Field Dispatch
-
-:::tip[Dispatch #1: Stop Treating the Math Like a Mind]
-Why do smart teams build brittle AI software? Because they subconsciously treat large language models as minds that understand intent rather than statistical token calculators. 
-
-[**Read Dispatch #1: AI Anthropomorphism &rarr;**](/dispatches/01-ai-anthropomorphism/)
-:::

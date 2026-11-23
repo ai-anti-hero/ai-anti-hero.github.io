@@ -5,6 +5,9 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://ai-anti-hero.github.io',
+	server: {
+		host: true,
+	},
 	integrations: [
 		starlight({
 			title: 'AI Anti-Hero',
@@ -19,13 +22,13 @@ export default defineConfig({
 				{
 					label: 'Start Here',
 					items: [
-						{ label: 'Welcome & Manifesto', slug: 'start-here/welcome' },
+						{ label: 'Welcome', slug: 'start-here/welcome' },
 					],
 				},
 				{
-					label: 'Field Guide Dispatches',
+					label: 'Field Guide',
 					items: [
-						{ autogenerate: { directory: 'dispatches' } },
+						{ autogenerate: { directory: 'field-guide' } },
 					],
 				},
 				{

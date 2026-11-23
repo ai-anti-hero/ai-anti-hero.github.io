@@ -1,15 +1,20 @@
 ---
+import { Icon } from '@astrojs/starlight/components';
+
 interface Props {
   title?: string;
   icon?: string;
 }
 
-const { title = "Real Talk", icon = "⚡" } = Astro.props;
+const { title = "Real Talk", icon = "information" } = Astro.props;
+const isNamedIcon = icon && /^[a-z0-9:-]+$/i.test(icon);
 ---
 
 <div class="real-talk-box">
   <div class="real-talk-badge">
-    <span class="real-talk-icon" aria-hidden="true">{icon}</span>
+    <span class="real-talk-icon" aria-hidden="true">
+      {isNamedIcon ? <Icon name={icon as any} size="1.2rem" /> : icon}
+    </span>
     <span class="real-talk-label">{title}</span>
   </div>
   <div class="real-talk-body">
