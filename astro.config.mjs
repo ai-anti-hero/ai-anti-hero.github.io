@@ -12,6 +12,7 @@ export default defineConfig({
 		starlight({
 			title: 'AI Anti-Hero',
 			description: 'The Field Guide to Practical AI without the Hype',
+			favicon: '/ai-anti-hero.png',
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/ai-anti-hero' },
 			],
