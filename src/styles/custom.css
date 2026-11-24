@@ -76,6 +76,38 @@
 	margin-bottom: 0;
 }
 
+/* Custom Callout: Earthy Green Tip Aside with Compass Icon */
+.starlight-aside--tip {
+	--sl-color-asides-text-accent: #365314;
+	--sl-color-asides-border: #4d7c0f;
+	background-color: rgba(77, 124, 15, 0.08);
+	border-radius: 0 0.5rem 0.5rem 0;
+	border-top: 1px solid rgba(77, 124, 15, 0.2);
+	border-right: 1px solid rgba(77, 124, 15, 0.2);
+	border-bottom: 1px solid rgba(77, 124, 15, 0.2);
+}
+
+:root[data-theme='dark'] .starlight-aside--tip {
+	--sl-color-asides-text-accent: #bef264;
+	--sl-color-asides-border: #65a30d;
+	background-color: rgba(101, 163, 13, 0.12);
+	border-top-color: rgba(101, 163, 13, 0.25);
+	border-right-color: rgba(101, 163, 13, 0.25);
+	border-bottom-color: rgba(101, 163, 13, 0.25);
+}
+
+.starlight-aside--tip .starlight-aside__icon {
+	width: 1.25rem;
+	height: 1.25rem;
+	background-color: currentColor;
+	-webkit-mask: url('/compass.svg') no-repeat center / contain;
+	mask: url('/compass.svg') no-repeat center / contain;
+}
+
+.starlight-aside--tip .starlight-aside__icon path {
+	display: none;
+}
+
 /* Enhancements for brand aesthetic */
 .site-title {
 	font-weight: 800;
@@ -102,7 +134,9 @@
 		object-fit: cover !important;
 		border-radius: 1.25rem;
 		border: 2px solid rgba(249, 115, 22, 0.35);
-		box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 25px rgba(249, 115, 22, 0.2);
+		box-shadow:
+			0 16px 36px -10px rgba(0, 0, 0, 0.5),
+			0 0 25px rgba(249, 115, 22, 0.2);
 		margin-inline: 0 !important;
 	}
 
@@ -141,7 +175,9 @@
 		height: auto !important;
 		border-radius: 1rem;
 		border: 2px solid rgba(249, 115, 22, 0.35);
-		box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 20px rgba(249, 115, 22, 0.15);
+		box-shadow:
+			0 10px 25px -5px rgba(0, 0, 0, 0.4),
+			0 0 20px rgba(249, 115, 22, 0.15);
 		margin-inline: auto !important;
 	}
 }

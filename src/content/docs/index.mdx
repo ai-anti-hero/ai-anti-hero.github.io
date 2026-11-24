@@ -9,19 +9,28 @@ hero:
     file: ../../assets/anti-hero.jpg
     alt: AI Anti-Hero
   actions:
-    # - text: Read Dispatch #1
-    #   link: /dispatches/01-ai-anthropomorphism/
-    #   icon: right-arrow
-    #   variant: primary
     - text: Start Here
       link: /start-here/welcome/
       icon: open-book
       variant: primary
+    - text: Read Field Entry
+      link: /field-guide/20261124-anthropomorphism/
+      icon: right-arrow
+      variant: secondary
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
-import RealTalk from '../../components/RealTalk.astro';
+import AntiHero from '../../components/AntiHero.astro';
 
-<RealTalk title="The Anti-Hero" icon="information">
+<AntiHero title="The Anti-Hero" icon="information">
 I'm not the hero. I'm the guy in the back making fun of the hero's shirt.
-</RealTalk>
+</AntiHero>
+
+### Latest Field Guide Entry
+
+:::tip[AI Is a Tool, Not a Person]
+Modern AI chatbots write with enough confidence to blur the line between
+software and human, and it’s on you to keep that boundary intact.
+
+[**Read the Field Guide Entry &rarr;**](/field-guide/20261124-anthropomorphism/)
+:::
