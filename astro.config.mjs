@@ -13,6 +13,24 @@ export default defineConfig({
 			title: 'AI Anti-Hero',
 			description: 'The Field Guide to Practical AI without the Hype',
 			favicon: '/ai-anti-hero.png',
+			head: [
+				{
+					tag: 'script',
+					attrs: {
+						async: true,
+						src: 'https://www.googletagmanager.com/gtag/js?id=G-FDK7DY5Y91',
+					},
+				},
+				{
+					tag: 'script',
+					content: [
+						'window.dataLayer = window.dataLayer || [];',
+						'function gtag(){dataLayer.push(arguments);}',
+						"gtag('js', new Date());",
+						"gtag('config', 'G-FDK7DY5Y91');",
+					].join('\n'),
+				},
+			],
 			social: [
 				{
 					icon: 'github',
