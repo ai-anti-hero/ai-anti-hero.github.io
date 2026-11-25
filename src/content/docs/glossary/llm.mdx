@@ -1,0 +1,37 @@
+---
+title: Large Language Model (LLM)
+description: A machine learning model trained to predict patterns in language.
+---
+
+import AntiHero from '../../../components/AntiHero.astro';
+
+### The Core Concept
+
+At its heart, a Large Language Model (LLM) is a machine learning model trained
+to recognize patterns in language and predict what comes next. Rather than
+retrieving answers from a database of pre-written responses, it learns
+statistical patterns and relationships between words, phrases, and concepts from
+large datasets of text.
+
+When you provide a prompt, the model generates a response by predicting one
+token at a time, using the preceding context to determine what comes next. A
+token can represent a whole word, part of a word, or a punctuation mark. The
+process continues until the response is complete or another stopping condition
+is reached.
+
+**Training (Pre-training):** Developers train the model using enormous datasets
+that may include books, articles, websites, and code repositories. During
+training, the model adjusts billions or even trillions of internal numerical
+values, called parameters, to improve its ability to recognize patterns and
+predict tokens.
+
+<AntiHero title="The Anti-Hero" icon="information">
+Once an LLM is trained and deployed, its underlying parameters are frozen and
+the model itself is **stateless**—each request is an isolated pass where tokens
+go in and predicted tokens come out. No matter how much you interact with,
+correct, or instruct the model during a conversation, those core weights do not
+update or permanently learn from your session; any continuity comes from the
+application re-sending your prior chat history inside the prompt on every turn.
+</AntiHero>
+
+

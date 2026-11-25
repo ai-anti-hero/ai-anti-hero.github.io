@@ -14,7 +14,11 @@ export default defineConfig({
 			description: 'The Field Guide to Practical AI without the Hype',
 			favicon: '/ai-anti-hero.png',
 			social: [
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/ai-anti-hero' },
+				{
+					icon: 'github',
+					label: 'GitHub',
+					href: 'https://github.com/ai-anti-hero',
+				},
 			],
 			customCss: [
 				'./src/styles/custom.css',
@@ -36,6 +40,12 @@ export default defineConfig({
 					label: 'Playbooks',
 					items: [
 						{ autogenerate: { directory: 'playbooks' } },
+					],
+				},
+				{
+					label: 'Glossary',
+					items: [
+						{ autogenerate: { directory: 'glossary' } },
 					],
 				},
 			],

@@ -108,6 +108,18 @@
 	display: none;
 }
 
+/* Hero Action: Glossary Button Icon from src/assets */
+.glossary-button::after {
+	content: '';
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: currentColor;
+	-webkit-mask: url('../assets/book-az.svg') no-repeat center / contain;
+	mask: url('../assets/book-az.svg') no-repeat center / contain;
+	flex-shrink: 0;
+}
+
 /* Enhancements for brand aesthetic */
 .site-title {
 	font-weight: 800;
