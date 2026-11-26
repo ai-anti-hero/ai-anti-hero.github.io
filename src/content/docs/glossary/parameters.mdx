@@ -1,0 +1,43 @@
+---
+title: Parameters
+description: Learned numerical values inside a model used to predict tokens.
+---
+
+import AntiHero from '../../../components/AntiHero.astro';
+
+**Parameters** are the millions or billions of internal numerical values a
+model learns during training and uses to process input and predict what comes
+next.
+
+### The Basics
+
+Think of parameters like millions of tiny volume knobs or dimmer switches on a
+giant soundboard. No single knob stores a specific fact or pre-written answer;
+instead, billions of settings work together to recognize patterns and generate
+language. Once a model finishes training and is deployed for everyday use, those
+knobs are locked in place—chatting with an AI passes your prompt through its
+existing settings rather than rewriting them.
+
+### More Detail
+
+Mathematically, parameters consist primarily of **weights** and **biases**
+arranged in large matrices across neural network layers. During pre-training and
+fine-tuning, optimization algorithms iteratively adjust these floating-point
+values to minimize prediction error across massive datasets. At inference time,
+incoming tokens are converted into vectors and multiplied through those frozen
+weight matrices to compute probability distributions over the next token.
+
+Parameter count directly governs memory footprint and compute cost. In standard
+**dense** models, every parameter activates for every token, so a 70B model
+requires roughly ten times the compute and memory of a 7B model. Newer
+**Mixture-of-Experts (MoE)** architectures cut per-token compute by routing each
+token through only a subset of active parameters.
+
+<AntiHero title="The Anti-Hero: Chats Don't Train the Model" icon="information">
+During normal use, a deployed model's parameters are locked in. Nothing you type
+in an ordinary chat rewrites its weights—making the model itself stateless. It
+doesn't permanently learn from your conversations. When an AI "remembers"
+something from earlier in your thread, it’s just re-reading your chat history as
+context to guess the next token, not updating its internal settings. Changing
+actual parameters takes a separate training or fine-tuning run.
+</AntiHero>
