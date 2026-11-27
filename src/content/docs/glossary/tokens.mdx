@@ -1,0 +1,68 @@
+---
+title: Token
+description:
+  The fundamental unit of text—words, subwords, or characters — that LLMs
+  convert into numbers to process and generate language.
+---
+
+import AntiHero from '../../../components/AntiHero.astro';
+
+**Tokens** are the fundamental units of text that large language models
+process and generate. A token can represent a whole word, part of a word,
+punctuation mark, whitespace sequence, or even a single character or byte.
+Rather than processing text directly as humans read it, language models convert
+text into numbered tokens and use mathematical operations to predict what comes
+next.
+
+## The Basics
+
+Models don't read words; they do math. Before an AI processes your prompt, a
+tokenizer maps your text into smaller pieces and assigns each piece a unique
+number called a token ID. Common words like "apple" usually get a single ID,
+while longer words like "unbelievable" get split into smaller chunks — each with
+its own ID.
+
+Do not mistake "Token ID" with "Token". The token is the piece of text or byte
+sequence. Token ID is the integer index pointing to the specific token in the
+vocabulary table.
+
+In English, 1,000 tokens equals roughly 750 words, though that ratio
+drops fast depending on the tokenizer. Programming code and non-English
+languages require considerably more tokens to say the exact same thing.
+
+## More Detail
+
+Tokenizers use algorithms to construct vocabularies during model development.
+These vocabularies typically contain tens of thousands to hundreds of thousands
+of entries.
+
+**Tokenizer training (pre-LLM):** A tokenizer is typically trained or selected
+before the main LLM weights are pretrained. Its vocabulary and encoding rules
+are established before the model learns its token embeddings and language
+representations.
+
+**Vocabulary lock:** Once established, the tokenizer's vocabulary,
+token-to-ID mapping, and encoding rules are normally kept fixed throughout
+pre-training, fine-tuning, and inference. Changing them requires corresponding
+changes to the model's embedding and potentially output layers to preserve
+compatibility with the learned weights..
+
+The resulting vocabulary and tokenization rules are saved alongside the model.
+
+**Runtime tokenization:** At runtime, the tokenizer converts text into token IDs
+using its predefined vocabulary and encoding rules. Each token ID indexes a
+learned numerical vector called an embedding. These vectors provide the model's
+initial representations of tokens, which are subsequently transformed through
+the neural network to capture contextual, syntactic, and semantic information.
+
+<AntiHero title="The Anti-Hero:" icon="information">
+AI models are stateless—they have zero native memory between messages. Every
+time you hit send, the app quietly repackages your entire chat history (up to
+the context window limit) and feeds it back to the model alongside your new
+prompt just to generate the next reply.
+
+That means long, meandering chats burn tokens exponentially faster with every
+turn. Start fresh chats often and keep threads focused on one task—otherwise,
+you're burning usage quotas and paying API costs just for the model to re-read
+its own old answers.
+</AntiHero>

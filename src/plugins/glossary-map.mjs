@@ -28,4 +28,8 @@ export const glossaryTerms = [
 		href: '/glossary/parameters/',
 		terms: ['parameters', 'parameter'],
 	},
+	{
+		href: '/glossary/tokens/',
+		terms: ['tokens', 'token'],
+	},
 ];
