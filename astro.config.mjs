@@ -1,12 +1,19 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
 import starlight from '@astrojs/starlight';
+import { remarkGlossaryLinks } from './src/plugins/remark-glossary-links.mjs';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://ai-anti-hero.github.io',
 	server: {
 		host: true,
+	},
+	markdown: {
+		processor: unified({
+			remarkPlugins: [remarkGlossaryLinks],
+		}),
 	},
 	integrations: [
 		starlight({
