@@ -45,7 +45,7 @@ representations.
 token-to-ID mapping, and encoding rules are normally kept fixed throughout
 pre-training, fine-tuning, and inference. Changing them requires corresponding
 changes to the model's embedding and potentially output layers to preserve
-compatibility with the learned weights..
+compatibility with the learned weights.
 
 The resulting vocabulary and tokenization rules are saved alongside the model.
 
@@ -55,7 +55,7 @@ learned numerical vector called an embedding. These vectors provide the model's
 initial representations of tokens, which are subsequently transformed through
 the neural network to capture contextual, syntactic, and semantic information.
 
-<AntiHero title="The Anti-Hero:" icon="information">
+<AntiHero title="The Anti-Hero: Use Tokens Wisely" icon="information">
 AI models are stateless—they have zero native memory between messages. Every
 time you hit send, the app quietly repackages your entire chat history (up to
 the context window limit) and feeds it back to the model alongside your new
